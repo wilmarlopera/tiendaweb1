@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productos</title>
+    <link rel="stylesheet" href="css/productos.css">
 </head>
 <body>
     <?php 
@@ -14,23 +15,23 @@
         $resultado=$objetoBD->consultar_datos($consultasql);
 
     ?> 
-    <div>
+    <div class="cont">
         <nav>
             <h1>tienda de laura</h1>
             <a href="index.html">registro</a>
             <a href="productos.php">productos</a>
         </nav>
-        <div>
+        <div class="mar">
             <?php foreach($resultado as $resultados): ?>
-                <div>
+                <div class="cubo">
                     <img src="<?php echo $resultados['imagen']; ?>" alt="imagen producto">
                     <p><?php  echo $resultados['nombre'];?></p>
                     <p><?php  echo $resultados['marca'];?></p>
                     <p><?php  echo $resultados['precio'];?></p>
                     <p><?php  echo $resultados['descripcion'];?></p>
-                    <div>
-                        <a onclick="mostrar()">editar</a>
-                        <a href="php/eliminar.php?id=<?php  echo $resultados['id'];?>">eliminar</a>
+                    <div class="btns">
+                        <a class="b" onclick="mostrar()">editar</a>
+                        <a class="r" href="php/eliminar.php?id=<?php  echo $resultados['id'];?>">eliminar</a>
                     </div>
                 </div>
                 <div id="Modal">
@@ -49,6 +50,9 @@
 
                
         </div>
+        <footer>
+            <p>derechos reservados &copy;</p>
+        </footer>
     </div>
 </body>
 </html>
