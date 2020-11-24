@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tienda de laura</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+        <div class="cont">
+           <nav>
+               <h1>tienda de laura</h1>
+               <a href="index.html">registro</a>
+               <a href="productos.php">productos</a>
+           </nav> 
+           <form action="php/agregardatos.php" method="POST" >
+              <div class="title">
+                 <h3>registro de productos</h3>
+                  
+              </div>
+              <div class="env">
+                  <input class="campos" type="text" name="nombre"placeholder="nombre producto:  " >
+                  <input class="campos" type="text" name="marca"placeholder="marca producto">
+                  <input class="campos" type="text"name="precio"placeholder="precio producto">
+                  <input class="campos" type="text"name="imagen"placeholder="URL/IMAGEN">
+                  <input class="des" type="text"name="descripcion"placeholder="descripcion de producto">
+                  <input type="submit"name="btn"value="registrar">
+              </div> 
+           </form>
+           <footer>
+               <span>todos los derechos reservados &copy;</span>
+           </footer>
+        </div>
+
+</body>
+</html>
